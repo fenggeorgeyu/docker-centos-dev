@@ -1,0 +1,9 @@
+
+version: "3"
+
+services:
+  centos-dev:
+    image: fenggeorgeyu/centos-dev
+    entrypoint: /bin/bash
+
+
