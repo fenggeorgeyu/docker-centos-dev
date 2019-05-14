@@ -1,30 +1,43 @@
 
-container_name=centos-dev
-name=fenggeorgeyu/${container_name}
-docker_file_base=Dockerfile
+container_name_base=centos-dev-base
+name_base=fenggeorgeyu/${container_name_base}
+path_base=base
+
+
 
 all:
 
-build:
-	docker build -t ${name} -f ${docker_file_base} .
+# base image
+build-base:
+	docker build -t ${name_base} ${path_base}
 
-clean:
-	docker rmi ${name}
+push-base:
+	docker push ${name_base}
 
-push:
-	docker push ${name}
+clean-base:
+	docker rmi ${name_base}
 
-run:
-	docker run -it --rm --name ${container_name} --entrypoint=/bin/bash -v $$(pwd)/shared:/shared ${name}
+run-base:
+	docker run -it --rm --name ${container_name_base} --entrypoint=/bin/bash -v $$(pwd)/shared:/shared ${name_base}
 
-stop:
-	docker-compose stop
+# jdk image
 
-delete:
-	docker-compose down
+container_name_jdk=centos-dev-jdk
+name_jdk=fenggeorgeyu/${container_name_jdk}
+path_jdk=jdk
 
-delete-all:
-	docker-compose down -v
+build-jdk:
+	docker build -t ${name_jdk} ${path_jdk}
+
+push-jdk:
+	docker push ${name_jdk}
+
+clean-jdk:
+	docker rmi ${name_jdk}
+
+run-jdk:
+	docker run -it --rm --name ${container_name_jdk} --entrypoint=/bin/bash -v $$(pwd)/shared:/shared ${name_jdk}
+
 
 commit:
 	git add -u
