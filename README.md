@@ -1,5 +1,8 @@
 # docker-centos-dev
 
+web: https://hub.docker.com/r/fenggeorgeyu/centos-dev
+docker: `docker pull fenggeorgeyu/centos-dev:tag`
+
 dev environment in centos 
 
 * latests, base:
