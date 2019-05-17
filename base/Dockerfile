@@ -6,7 +6,7 @@ RUN yum install -y epel-release && \
 
 # basic tools
 RUN yum -y install htop wget && \
-	yum -y install gcc gcc-c++ gdb zlib-devel readline-devel git bison flex flex-devel && \
+	yum -y install gcc gcc-c++ make gdb zlib-devel readline-devel git bison flex flex-devel && \
 	yum -y clean all
 
 
