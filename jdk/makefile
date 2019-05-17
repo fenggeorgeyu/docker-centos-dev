@@ -3,7 +3,7 @@ tag=jdk
 image_name=centos-dev
 name=fenggeorgeyu/${image_name}:${tag}
 
-all: build bush
+all: build push
 
 build:
 	docker build -t ${name} .
