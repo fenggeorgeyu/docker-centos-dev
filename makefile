@@ -1,5 +1,5 @@
 
-container_name_base=centos-dev-base
+container_name_base=centos-dev:base
 name_base=fenggeorgeyu/${container_name_base}
 path_base=base
 
@@ -22,7 +22,7 @@ run-base:
 
 # jdk image
 
-container_name_jdk=centos-dev-jdk
+container_name_jdk=centos-dev:jdk
 name_jdk=fenggeorgeyu/${container_name_jdk}
 path_jdk=jdk
 
