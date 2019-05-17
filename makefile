@@ -1,7 +1,6 @@
 
 image_name=fenggeorgeyu/centos-dev
 
-# SUBDIRS = $(shell ls -d -Ishared */ )
 SUBDIRS = $(shell ls -d */ | grep -v 'shared' )
 
 all: build
