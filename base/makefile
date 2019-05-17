@@ -3,7 +3,7 @@ tag=base
 image_name=centos-dev
 name=fenggeorgeyu/${image_name}:${tag}
 
-all: build push
+all: build 
 
 build:
 	docker build -t ${name} .

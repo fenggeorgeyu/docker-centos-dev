@@ -4,13 +4,12 @@ image_name=fenggeorgeyu/centos-dev
 SUBDIRS = $(shell ls -d */ | grep -v 'shared' )
 
 all: build
-	
-build:
-	for dir in $(SUBDIRS) ; do \
-		# echo $$dir ; \
-	    make -C  $$dir ; \
-    done
 
+% :
+	for dir in $(SUBDIRS) ; do \
+	    make -C  $$dir $@ ; \
+    done
+	
 clean:
 	docker rmi $$(docker images | grep ${image_name} | tr -s ' ' | cut -d ' ' -f 3)
 
