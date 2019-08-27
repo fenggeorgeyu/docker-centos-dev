@@ -1,5 +1,5 @@
 
-tag=jdk:8
+tag=jdk:6
 image_name=centos-dev
 name=fenggeorgeyu/${image_name}:${tag}
 
