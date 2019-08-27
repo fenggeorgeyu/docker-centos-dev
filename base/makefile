@@ -6,7 +6,7 @@ name=fenggeorgeyu/${image_name}:${tag}
 all: build 
 
 build:
-	docker build ${name} .
+	docker build -t ${name} .
 	docker tag ${name} fenggeorgeyu/${image_name}:latest
 
 push:
