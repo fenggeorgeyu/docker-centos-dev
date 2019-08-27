@@ -1,12 +1,12 @@
 
-tag=jdk:8
+tag=jdk8
 image_name=centos-dev
 name=fenggeorgeyu/${image_name}:${tag}
 
 all: build 
 
 build:
-	docker build ${name} .
+	docker build -t ${name} .
 
 push:
 	docker push ${name}
