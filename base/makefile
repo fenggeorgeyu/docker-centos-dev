@@ -11,7 +11,7 @@ build:
 
 push:
 	docker push ${name}
-	# docker push fenggeorgeyu/${image_name}:latest
+	docker push fenggeorgeyu/${image_name}:latest
 
 clean:
 	docker rmi ${name}
