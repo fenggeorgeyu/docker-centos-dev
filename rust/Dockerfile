@@ -11,7 +11,7 @@ RUN echo 1 | ./rustup-init
 
 RUN rm -f rustup-init
 
-RUN source $HOME/.cargo/env
+RUN echo "source $HOME/.cargo/env" >>.bashrc
 
 RUN yum -y clean all
 
