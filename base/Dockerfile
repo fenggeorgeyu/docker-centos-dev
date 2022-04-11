@@ -7,6 +7,7 @@ RUN yum install -y epel-release && \
 # basic tools
 RUN yum -y install htop wget net-tools && \
 	yum -y install gcc gcc-c++ make cmake gdb zlib-devel readline-devel git bison flex flex-devel && \
+	yum -y install tclsh && \
 	yum -y clean all
 
 
