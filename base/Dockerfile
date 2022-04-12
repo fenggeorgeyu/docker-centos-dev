@@ -11,7 +11,7 @@ RUN yum install -y epel-release && \
 
 # basic tools
 RUN yum -y install htop wget net-tools && \
-	yum -y install gcc gcc-c++ make cmake gdb zlib-devel readline-devel git bison flex tcl && \
+	yum -y install gcc gcc-c++ make cmake gdb zlib-devel readline readline-devel git bison flex tcl tcl-devel && \
 	yum -y clean all
 
 

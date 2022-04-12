@@ -7,7 +7,7 @@ all: build
 
 build:
 	docker build -t ${name} .
-	docker tag ${name} localhost/fenggeorgeyu/${image_name}:latest
+	docker tag ${name} fenggeorgeyu/${image_name}:latest
 
 push:
 	docker push ${name}
@@ -15,6 +15,7 @@ push:
 
 clean:
 	docker rmi ${name}
+	docker system prune
 
 
 
